@@ -1,0 +1,41 @@
+{
+    "name": "codelabs/voyagerarticles",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shawn Mayzes",
+            "email": "shawn@codelabs.ca",
+            "homepage": "https://codelabs.ca"
+        }
+    ],
+    "homepage": "https://github.com/codelabs/voyagerarticles",
+    "keywords": ["Laravel", "VoyagerArticles"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codelabs\\VoyagerArticles\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codelabs\\VoyagerArticles\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codelabs\\VoyagerArticles\\VoyagerArticlesServiceProvider"
+            ],
+            "aliases": {
+                "VoyagerArticles": "Codelabs\\VoyagerArticles\\Facades\\VoyagerArticles"
+            }
+        }
+    }
+}
