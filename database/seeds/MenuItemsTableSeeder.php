@@ -2,8 +2,8 @@
 
 namespace Codelabs\VoyagerArticles\Database\Seeds;
 
-use Illuminate\Database\Seeder;
 use TCG\Voyager\Models\Menu;
+use Illuminate\Database\Seeder;
 use TCG\Voyager\Models\MenuItem;
 
 class MenuItemsTableSeeder extends Seeder
@@ -23,7 +23,7 @@ class MenuItemsTableSeeder extends Seeder
             'url'     => '/admin/articles',
             'route'   => null,
         ]);
-        if (!$menuItem->exists) {
+        if (! $menuItem->exists) {
             $menuItem->fill([
                 'target'     => '_self',
                 'icon_class' => 'voyager-documentation',
