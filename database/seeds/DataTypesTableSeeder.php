@@ -2,10 +2,10 @@
 
 namespace Codelabs\VoyagerArticles\Database\Seeds;
 
-use Codelabs\VoyagerArticles\Policies\ArticlePolicy;
-use Codelabs\VoyagerArticles\Models\Article;
 use Illuminate\Database\Seeder;
 use TCG\Voyager\Models\DataType;
+use Codelabs\VoyagerArticles\Models\Article;
+use Codelabs\VoyagerArticles\Policies\ArticlePolicy;
 
 class DataTypesTableSeeder extends Seeder
 {
@@ -15,7 +15,7 @@ class DataTypesTableSeeder extends Seeder
     public function run()
     {
         $dataType = DataType::firstOrNew(['slug' => 'articles']);
-        if (!$dataType->exists) {
+        if (! $dataType->exists) {
             $dataType->fill([
                 'name'                  => 'articles',
                 'display_name_singular' => __('voyagerarticles::seeders.data_types.article.singular'),
