@@ -15,7 +15,7 @@ class DataRowsTableSeeder extends Seeder
     {
         $dataType = DataType::where('slug', 'articles')->firstOrFail();
         $dataRow = $this->dataRow($dataType, 'id');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'number',
                 'display_name' => __('voyagerarticles::seeders.data_rows.id'),
@@ -31,7 +31,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'unique_id');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
                 'display_name' => __('voyagerarticles::seeders.data_rows.unique_id'),
@@ -47,7 +47,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'author_id');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
                 'display_name' => __('voyagerarticles::seeders.data_rows.author'),
@@ -63,7 +63,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'title');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
                 'display_name' => __('voyagerarticles::seeders.data_rows.title'),
@@ -79,7 +79,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'excerpt');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text_area',
                 'display_name' => __('voyagerarticles::seeders.data_rows.excerpt'),
@@ -95,7 +95,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'body');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'rich_text_box',
                 'display_name' => __('voyagerarticles::seeders.data_rows.body'),
@@ -111,7 +111,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'image');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'image',
                 'display_name' => __('voyagerarticles::seeders.data_rows.article_image'),
@@ -151,7 +151,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'slug');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
                 'display_name' => __('voyagerarticles::seeders.data_rows.slug'),
@@ -175,7 +175,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'meta_description');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text_area',
                 'display_name' => __('voyagerarticles::seeders.data_rows.meta_description'),
@@ -191,7 +191,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'meta_keywords');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text_area',
                 'display_name' => __('voyagerarticles::seeders.data_rows.meta_keywords'),
@@ -207,7 +207,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'status');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'select_dropdown',
                 'display_name' => __('voyagerarticles::seeders.data_rows.status'),
@@ -230,7 +230,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'created_at');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'timestamp',
                 'display_name' => __('voyagerarticles::seeders.data_rows.created_at'),
@@ -246,7 +246,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'updated_at');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'timestamp',
                 'display_name' => __('voyagerarticles::seeders.data_rows.updated_at'),
@@ -262,7 +262,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'seo_title');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'text',
                 'display_name' => __('voyagerarticles::seeders.data_rows.seo_title'),
@@ -277,7 +277,7 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
         $dataRow = $this->dataRow($dataType, 'featured');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'checkbox',
                 'display_name' => __('voyagerarticles::seeders.data_rows.featured'),
@@ -293,7 +293,7 @@ class DataRowsTableSeeder extends Seeder
         }
 
         $dataRow = $this->dataRow($dataType, 'article_belongsto_user_relationship');
-        if (!$dataRow->exists) {
+        if (! $dataRow->exists) {
             $dataRow->fill([
                 'type'         => 'relationship',
                 'display_name' => __('voyagerarticles::seeders.data_rows.author'),
@@ -327,8 +327,9 @@ class DataRowsTableSeeder extends Seeder
      *
      * @return [type] [description]
      */
+
     /**
-     * Get the data row from type and field
+     * Get the data row from type and field.
      *
      * @param $type
      * @param $field
