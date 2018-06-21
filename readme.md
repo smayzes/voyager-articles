@@ -3,7 +3,8 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][https://github.styleci.io/repos/138051317/shield?style=flat]
+<a href="https://styleci.io/repos/138051317/shield?style=flat"><img src="https://styleci.io/repos/138051317/shield?style=flat" alt="Build Status"></a>
+
 
 Laravel Voyager Articles BREAD. 
 ## Installation
@@ -16,9 +17,18 @@ $ composer require codelabs/voyagerarticles
 
 ## Usage
 
+Publish the config file (choose `voyagerarticles.config`)
+``` bash
+php artisan vendor:publish 
+```
+Seed the Voyager database tables
+``` bash
+php artisan db:seed --class="Codelabs\VoyagerArticles\Database\Seeds\DatabaseSeeder"     
+```
+Done!
 ## Change log
 
-Please see the [changelog](changelog.md) for more information on what has changed recently.
+* Initial Development
 
 ## Testing
 
