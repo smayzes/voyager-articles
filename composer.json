@@ -12,7 +12,8 @@
     "homepage": "https://github.com/codelabs/voyagerarticles",
     "keywords": ["Laravel", "VoyagerArticles"],
     "require": {
-        "illuminate/support": "~5"
+        "illuminate/support": "~5",
+        "tcg/voyager": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0",
