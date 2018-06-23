@@ -24,6 +24,7 @@ return [
         'role'             => 'Role',
         'seo_title'        => 'SEO Title',
         'slug'             => 'Slug',
+        'permalink'        => 'Permalink',
         'status'           => 'Status',
         'title'            => 'Title',
         'updated_at'       => 'Updated At',

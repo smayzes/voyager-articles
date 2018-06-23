@@ -155,7 +155,7 @@ class DataRowsTableSeeder extends Seeder
             $dataRow->fill([
                 'type'         => 'text',
                 'display_name' => __('voyagerarticles::seeders.data_rows.slug'),
-                'required'     => 1,
+                'required'     => 0,
                 'browse'       => 0,
                 'read'         => 1,
                 'edit'         => 1,
@@ -174,6 +174,22 @@ class DataRowsTableSeeder extends Seeder
             ])->save();
         }
 
+        $dataRow = $this->dataRow($dataType, 'permalink');
+        if (! $dataRow->exists) {
+            $dataRow->fill([
+                'type'         => 'text',
+                'display_name' => __('voyagerarticles::seeders.data_rows.permalink'),
+                'required'     => 0,
+                'browse'       => 0,
+                'read'         => 1,
+                'edit'         => 1,
+                'add'          => 1,
+                'delete'       => 1,
+                'details'      => null,
+                'order'        => 10,
+            ])->save();
+        }
+
         $dataRow = $this->dataRow($dataType, 'meta_description');
         if (! $dataRow->exists) {
             $dataRow->fill([
@@ -186,7 +202,7 @@ class DataRowsTableSeeder extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'      => null,
-                'order'        => 10,
+                'order'        => 11,
             ])->save();
         }
 
@@ -202,7 +218,7 @@ class DataRowsTableSeeder extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'      => null,
-                'order'        => 11,
+                'order'        => 12,
             ])->save();
         }
 
@@ -225,7 +241,7 @@ class DataRowsTableSeeder extends Seeder
                         'PENDING'   => 'pending',
                     ],
                 ]),
-                'order' => 12,
+                'order' => 13,
             ])->save();
         }
 
@@ -241,7 +257,7 @@ class DataRowsTableSeeder extends Seeder
                 'add'          => 0,
                 'delete'       => 0,
                 'details'      => null,
-                'order'        => 13,
+                'order'        => 14,
             ])->save();
         }
 
@@ -257,7 +273,7 @@ class DataRowsTableSeeder extends Seeder
                 'add'          => 0,
                 'delete'       => 0,
                 'details'      => null,
-                'order'        => 14,
+                'order'        => 15,
             ])->save();
         }
 
@@ -273,7 +289,7 @@ class DataRowsTableSeeder extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'      => null,
-                'order'        => 15,
+                'order'        => 16,
             ])->save();
         }
         $dataRow = $this->dataRow($dataType, 'featured');
@@ -288,7 +304,7 @@ class DataRowsTableSeeder extends Seeder
                 'add'          => 1,
                 'delete'       => 1,
                 'details'      => null,
-                'order'        => 16,
+                'order'        => 17,
             ])->save();
         }
 
@@ -314,7 +330,7 @@ class DataRowsTableSeeder extends Seeder
                     'pivot' => '0',
                     'taggable' => null,
                 ]),
-                'order'        => 17,
+                'order'        => 18,
             ])->save();
         }
     }
